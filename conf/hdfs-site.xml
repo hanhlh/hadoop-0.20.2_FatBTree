@@ -1,0 +1,248 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+  <property>
+   <name>dfs.data.dir</name>
+   <value>/home/hanhlh/exp/HDFS_FBT/hadoop-0.20.2_test/filesystem/dfs/data</value>
+ </property>
+ <property>
+  <name>dfs.name.dir</name>
+  <value>/home/hanhlh/exp/HDFS_FBT/hadoop-0.20.2_test/filesystem/dfs/name</value>
+  <final></final>
+ </property>
+ <property>
+  <name>dfs.namenode.id</name>
+  <value>1</value>
+ </property>
+
+ <!--
+ <property>
+  <name>mapred.system.dir</name>
+  <value>./filesystem/mapred/system</value>
+ </property>
+
+ <property>
+  <name>mapred.local.dir</name>
+  <value>./filesystem/mapred/local</value>
+ </property>
+ 
+ <property>
+ <name>hadoop.tmp.dir</name>
+ <value>/home/hanhlh/hadoopTmp</value>
+ <final>true</final>
+ </property>
+ -->
+ <property>
+   <name>dfs.replication</name>
+   <value>1</value>
+ </property>
+ 
+ <property>
+  <name>dfs.namenode.dataplacement.total.blocks</name>
+  <value>7</value>
+  <descriptor></descriptor>
+ </property>
+
+ <property>
+  <name>dfs.namenode.dataplacement.type</name>
+  <value>2</value>
+  <descriptor>1 for normal HDFS, 2 for RABBIT, 3 for PARAID</descriptor>
+ </property>
+
+ <property>
+  <name>dfs.namenode.dataplacement.number.priory.nodes</name>
+  <value>2</value>
+  <descriptor>Number of datanodes at Gear 1 for RABBIT and PARAID.</descriptor>
+ </property>
+
+ <property>
+  <name>dfs.namenode.dataplacement.number.secondary.nodes</name>
+  <value>5</value>
+  <descriptor>Number of datanodes at Gear 2 for RABBIT and PARAID.</descriptor>
+ </property>
+ <property>
+  <name>dfs.namenode.dataplacement.number.covering.nodes</name>
+  <value>3</value>
+ </property>
+
+ <property>
+  <name>dfs.namenode.dataplacement.number.non-covering.nodes</name>
+  <value>4</value>
+ </property>
+ 
+<property>
+  <name>dfs.namenode.dataplacement.priory.node.1</name>
+  <value>192.168.0.113</value>
+  <descriptor>PrimaryNode of RABBIT</descriptor>
+ </property>
+ 
+ <property>
+  <name>dfs.namenode.dataplacement.priory.node.2</name>
+  <value>192.168.0.114</value>
+  <descriptor>PrimaryNode of RABBIT</descriptor>
+ </property>
+ 
+ <property>
+  <name>dfs.namenode.dataplacement.secondary.node.1</name>
+  <value>192.168.0.116</value>
+  <descriptor>SecondaryNode of RABBIT</descriptor>
+ </property>
+ 
+ <property>
+  <name>dfs.namenode.dataplacement.secondary.node.2</name>
+  <value>192.168.0.146</value>
+  <descriptor>SecondaryNode of RABBIT</descriptor>
+ </property>
+ 
+ <property>
+  <name>dfs.namenode.dataplacement.secondary.node.3</name>
+  <value>192.168.0.149</value>
+  <descriptor>SecondaryNode of RABBIT</descriptor>
+ </property>
+
+ <property>
+  <name>dfs.namenode.dataplacement.secondary.node.4</name>
+  <value>192.168.0.150</value>
+  <descriptor>SecondaryNode of RABBIT</descriptor>
+ </property> 
+
+ <property>
+  <name>dfs.namenode.dataplacement.secondary.node.5</name>
+  <value>192.168.0.151</value>
+  <descriptor>SecondaryNode of RABBIT</descriptor>
+ </property>
+
+ <property>
+  <name>dfs.namenode.dataplacement.secondary.node.6</name>
+  <value>192.168.0.152</value>
+  <descriptor>SecondaryNode of RABBIT</descriptor>
+ </property>
+ 
+ <property>
+  <name>dfs.namenode.dataplacement.covering.node.1</name>
+  <value>192.168.0.113</value>
+  <descriptor>CoveringNode of PARAID</descriptor>
+ </property>
+ <property>
+  <name>dfs.namenode.dataplacement.covering.node.2</name>
+  <value>192.168.0.114</value>
+  <descriptor>CoveringNode of PARAID</descriptor>
+ </property>
+ <property>
+  <name>dfs.namenode.dataplacement.covering.node.3</name>
+  <value>192.168.0.116</value>
+  <descriptor>SecondaryNode of PARAID</descriptor>
+ </property>
+ 
+ <property>
+  <name>dfs.namenode.dataplacement.non-covering.node.1</name>
+  <value>192.168.0.146</value>
+  <descriptor>SecondaryNode of PARAID</descriptor>
+ </property>
+ 
+ <property>
+  <name>dfs.namenode.dataplacement.non-covering.node.2</name>
+  <value>192.168.0.149</value>
+  <descriptor>SecondaryNode of PARAID</descriptor>
+ </property>
+
+ <property>
+  <name>dfs.namenode.dataplacement.non-covering.node.3</name>
+  <value>192.168.0.150</value>
+  <descriptor>SecondaryNode of PARAID</descriptor>
+ </property> 
+
+ <property>
+  <name>dfs.namenode.dataplacement.non-covering.node.4</name>
+  <value>192.168.0.151</value>
+  <descriptor>SecondaryNode of PARAID</descriptor>
+ </property>
+ 
+ <property>
+  <name>dfs.block.size</name>
+  <value>67108864</value>
+  <descriptor>Block size 64MB</descriptor>
+ </property>
+<!--
+ <property>
+  <name>topology.script.file.name</name>
+  <value>./topology.py</value>
+  <descriptor>Rackaware topology file</descriptor>
+ </property>
+-->
+ <property>
+  <name>heartbeat.recheck.interval</name>
+  <value>30000</value>
+  <descriptor>To determine datanode is dead or not. 0.5 minutes. Default is 5 minues. Just for experiments.</descriptor>
+ </property>
+
+ <property>
+  <name>dfs.datanode.scan.period.hours</name>
+  <value>-1</value>
+ </property>
+
+ <property>
+  <name>dfs.replication.considerLoad</name>
+  <value>false</value>
+ </property>
+ <!-- Gear-->
+  <property>
+  <name>dfs.namenode.numberOfGear</name>
+  <value>3</value>
+  <descriptor>Number of gear that system can run</descriptor>
+ </property>
+
+ <property>
+  <name>dfs.namenode.Gear1</name>
+  <value>192.168.0.113,192.168.0.114</value>
+  <descriptor>List of datanode in gear 1</descriptor>
+ </property>
+
+ <property>
+  <name>dfs.namenode.Gear1.Dead</name>
+  <value>192.168.0.116,192.168.0.146,192.168.0.149,192.168.0.150,192.168.0.151</value>
+  <description>List of datande in gear 1 needed to be inactive</description>
+ </property>
+
+
+ <property>
+  <name>dfs.namenode.Gear2</name>
+  <value>192.168.0.113,192.168.0.114,192.168.0.116</value>
+  <descriptor>List of datanode in gear 2</descriptor>
+ </property>
+
+ <property>
+  <name>dfs.namenode.Gear2.Dead</name>
+  <value>192.168.0.146,192.168.0.149,192.168.0.150,192.168.0.151</value>
+  <descriptor>List of datanode in gear 2 needed to be inactive</descriptor>
+ </property>
+
+ <property>
+  <name>dfs.namenode.Gear3</name>
+  <value>192.168.0.113,192.168.0.114,192.168.0.116,192.168.0.146,192.168.0.149,192.168.0.150,192.168.0.151</value>
+  <descriptor>List of datanode in gear 3</descriptor>
+ </property>
+
+ <property>
+  <name>dfs.namenode.Gear3.Dead</name>
+  <value>null</value>
+  <descriptor>List of datanode in gear 3</descriptor>
+ </property>
+
+ <!--DataSet-->
+ <property>
+  <name>dfs.namenode.numberOfDataset</name>
+  <value>6</value>
+  <description></description>
+ </property>
+ <property>
+  <name>dfs.namenode.listOfNumBlockDataset</name>
+  <value>7,7,14,21,28,35</value>
+  <description></description>
+ </property>
+ 
+ </configuration>
+

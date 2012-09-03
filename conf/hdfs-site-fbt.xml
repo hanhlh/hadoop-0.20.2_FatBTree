@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+ <property>
+  <name>fs.default.names</name>
+  <value>hdfs://192.168.0.113:8020,hdfs://192.168.0.114:8020,hdfs://192.168.0.115:8020,hdfs://192.168.0.116:8020,hdfs://192.167.0.117:8020,hdfs://192.168.0.118:8020,hdfs://192.167.0.119:8020,hdfs://192.168.0.120:8020</value>
+ </property>
+
+ <property>
+  <name>dfs.nnbenchmark.dir</name>
+  <value>/user/hanhlh/</value>
+ </property>
+ 
+ <property>
+  <name>dfs.nnbenchmark.low</name>
+  <value>0</value>
+ </property>
+
+ <property>
+  <name>dfs.nnbenchmark.high</name>
+  <value>1000</value>
+ </property>
+<property>
+  <name>fs.namenodeFBTs</name>
+  <value>192.168.0.113,192.168.0.114,192.168.0.115,192.168.0.116,192.168.0.117,192.168.0.118,192.168.0.119,192.168.0.120</value>
+ </property>
+
+ <property>
+  <name>dfs.namenode.id</name>
+  <value>1</value>
+ </property>
+
+ <property>
+  <name>dfs.namenode.leader</name>
+  <value>edn13</value>
+ </property>
+ <property>
+
+  <name>dfs.datanode.fbt.datanodeNumber</name>
+  <value>8</value>
+ </property>
+
+ <property>
+  <name>partition</name>
+  <value>edn{13-20}</value>
+ </property>
+
+ <property>
+  <name>dfs.datanode.fbt.fanout</name>
+  <value>64</value>
+ </property>
+
+ <property>
+  <name>dfs.datanode.fbt.leaffanout</name>
+  <value>64</value>
+ </property>
+
+ <property>
+  <name>dfs.datanode.fbt.partIDDatanode.[1]</name>
+  <value>edn13</value>
+ </property>
+
+ <property>
+  <name>dfs.datanode.fbt.partIDDatanode.[2]</name>
+  <value>edn14</value>
+ </property>
+ 
+<property>
+  <name>dfs.datanode.fbt.partIDDatanode.[3]</name>
+  <value>edn15</value>
+ </property>
+
+ <property>
+  <name>dfs.datanode.fbt.partIDDatanode.[4]</name>
+  <value>edn16</value>
+ </property>
+ 
+ <property>
+  <name>dfs.datanode.fbt.partIDDatanode.[5]</name>
+  <value>edn17</value>
+ </property>
+
+ <property>
+  <name>dfs.datanode.fbt.partIDDatanode.[6]</name>
+  <value>edn18</value>
+ </property>
+ 
+ <property>
+  <name>dfs.datanode.fbt.partIDDatanode.[7]</name>
+  <value>edn19</value>
+ </property>
+
+ <property>
+  <name>dfs.datanode.fbt.partIDDatanode.[8]</name>
+  <value>edn20</value>
+ </property>
+ 
+ <property>
+  <name>dfs.datanode.fbt.partition-endpoint.[1]</name>
+  <value>edn13</value>
+ </property>
+
+ <property>
+  <name>dfs.datanode.fbt.partition-endpoint.[2]</name>
+  <value>edn14</value>
+ </property>
+ 
+ <property>
+  <name>dfs.datanode.fbt.partition-endpoint.[3]</name>
+  <value>edn15</value>
+ </property>
+
+ <property>
+  <name>dfs.datanode.fbt.partition-endpoint.[4]</name>
+  <value>edn16</value>
+ </property>
+ 
+ <property>
+  <name>dfs.datanode.fbt.partition-endpoint.[5]</name>
+  <value>edn17</value>
+ </property>
+
+ <property>
+  <name>dfs.datanode.fbt.partition-endpoint.[6]</name>
+  <value>edn18</value>
+ </property>
+ 
+ <property>
+  <name>dfs.datanode.fbt.partition-endpoint.[7]</name>
+  <value>edn19</value>
+ </property>
+
+ <property>
+  <name>dfs.datanode.fbt.partition-endpoint.[8]</name>
+  <value>edn20</value>
+ </property>
+ 
+<property>
+  <name>endPoint[1]</name>
+  <value>edn13</value>
+ </property>
+ 
+<property>
+  <name>endPoint[2]</name>
+  <value>edn14</value>
+ </property>
+
+<property>
+  <name>endPoint[3]</name>
+  <value>edn15</value>
+ </property>
+ 
+<property>
+  <name>endPoint[4]</name>
+  <value>edn16</value>
+ </property>
+
+<property>
+  <name>endPoint[5]</name>
+  <value>edn17</value>
+ </property>
+ 
+<property>
+  <name>endPoint[6]</name>
+  <value>edn18</value>
+ </property>
+
+<property>
+  <name>endPoint[7]</name>
+  <value>edn19</value>
+ </property>
+ 
+<property>
+  <name>endPoint[8]</name>
+  <value>edn20</value>
+ </property>
+ 
+ <property>
+  <name>ruleSet</name>
+  <value>org.apache.hadoop.hdfs.server.namenodeFBT.rule.SearchRule,org.apache.hadoop.hdfs.server.namenodeFBT.rule.InsertRule,org.apache.hadoop.hdfs.server.namenodeFBT.rule.FBTInsertModifyRule,org.apache.hadoop.hdfs.server.namenodeFBT.rule.FBTInsertRootModifyRule,org.apache.hadoop.hdfs.server.namenodeFBT.ReplyRule,org.apache.hadoop.hdfs.server.namenodeFBT.rule.FBTInsertMarkOptRule,org.apache.hadoop.hdfs.server.namenodeFBT.rule.FBTInsertModifyMarkOptRule,org.apache.hadoop.hdfs.server.namenodeFBT.lock.LockRule,org.apache.hadoop.hdfs.server.namenodeFBT.lock.UnlockRule,org.apache.hadoop.hdfs.server.namenodeFBT.lock.EndLockRule,org.apache.hadoop.hdfs.server.namenodeFBT.blink.rule.FBLTInsertModifyRule,org.apache.hadoop.hdfs.server.namenodeFBT.blink.rule.FBLTInsertRootModifyRule,org.apache.hadoop.hdfs.server.namenodeFBT.rule.SynchronizeRootRule,org.apache.hadoop.hdfs.server.namenodeFBT.rule.DeleteRule,org.apache.hadoop.hdfs.server.namenodeFBT.rule.FBTDeleteIncOptRule,org.apache.hadoop.hdfs.server.namenodeFBT.rule.FBTDeleteModifyIncOptRule,org.apache.hadoop.hdfs.server.namenodeFBT.rule.FBTDeleteModifyRule,org.apache.hadoop.hdfs.server.namenodeFBT.rule.GetAdditionalBlockRule,org.apache.hadoop.hdfs.server.namenodeFBT.rule.GetBlockLocationsRule</value>
+ </property>
+</configuration>
